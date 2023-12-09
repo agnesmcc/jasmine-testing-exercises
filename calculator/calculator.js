@@ -29,6 +29,9 @@ function setupIntialValues() {
 // Get the current values from the UI
 // Update the monthly payment
 function update() {
+  let values = getCurrentUIValues();
+  let monthly = calculateMonthlyPayment(values);
+  updateMonthly(monthly);
 }
 
 // Given an object of values (a value has amount, years and rate ),
