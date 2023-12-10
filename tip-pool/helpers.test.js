@@ -20,6 +20,12 @@ describe("Helpers test", function() {
         expect(tr.firstChild.innerText).toEqual('this');
     });
 
+    it('appendDeleteBtn should add a td with an x to a tr', function(){
+        let tr = document.createElement('tr');
+        appendDeleteBtn(tr);
+        expect(tr.firstChild.innerText).toEqual('X');
+    });
+
     afterEach(function() {
         allPayments = {};
       });
